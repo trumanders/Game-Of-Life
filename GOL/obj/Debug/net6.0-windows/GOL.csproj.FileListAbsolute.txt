@@ -1,0 +1,34 @@
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\bin\Debug\net6.0-windows\GOL.exe
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\bin\Debug\net6.0-windows\GOL.deps.json
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\bin\Debug\net6.0-windows\GOL.runtimeconfig.json
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\bin\Debug\net6.0-windows\GOL.dll
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\bin\Debug\net6.0-windows\GOL.pdb
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.csproj.AssemblyReference.cache
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.Form1.resources
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.csproj.GenerateResource.cache
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.GeneratedMSBuildEditorConfig.editorconfig
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.AssemblyInfoInputs.cache
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.AssemblyInfo.cs
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.csproj.CoreCompileInputs.cache
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.dll
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\refint\GOL.dll
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.pdb
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\GOL.genruntimeconfig.cache
+D:\-=ANDERS=-\-= OneDrive 1 TB =-\OneDrive\Programmering\C#\GOL\GOL\obj\Debug\net6.0-windows\ref\GOL.dll
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\GOL.exe
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\GOL.deps.json
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\GOL.runtimeconfig.json
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\GOL.dll
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\ref\GOL.dll
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\bin\Debug\net6.0-windows\GOL.pdb
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.csproj.AssemblyReference.cache
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.Form1.resources
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.csproj.GenerateResource.cache
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.GeneratedMSBuildEditorConfig.editorconfig
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.AssemblyInfoInputs.cache
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.AssemblyInfo.cs
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.csproj.CoreCompileInputs.cache
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.dll
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\ref\GOL.dll
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.pdb
+C:\-=ANDERS=-\OneDrive\Programmering\C#\GOL\Game_of_life\GOL\obj\Debug\net6.0-windows\GOL.genruntimeconfig.cache
