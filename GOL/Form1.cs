@@ -232,7 +232,7 @@ using Microsoft.VisualBasic;
                 // Iterate through living cells only
                 for (int i = 0; i < aliveCellsPoints.Count; i++) 
                 {                    
-                    int neighbourCount = countNeighbours(aliveCellsPoints[i], gridResolution, aliveDeadChecker);
+                    int neighbourCount = countNeighbours(aliveCellsPoints[i], gridResolution, aliveDeadChecker, true);
 
                     // If living cell has < 2 or > 3 neighbours, add cell to be removed
                     if (neighbourCount < 2 || neighbourCount > 3)
@@ -246,31 +246,6 @@ using Microsoft.VisualBasic;
 
                         // Store index to remove later in aliveCellsPoints
                         killIndexes.Add(i);
-                    }
-
-                    // Now iterate through cells around current alive cell (i)...
-                    for (int ii = aliveCellsPoints[i].X - 1; ii <= aliveCellsPoints[i].X + 1; ii++)
-                    {
-                        // Don't check outside of the grid
-                        if (ii < 0 || ii > gridResolution.X - 1) { continue; }
-                        
-                        for (int jj = aliveCellsPoints[i].Y - 1; jj <= aliveCellsPoints[i].Y + 1; jj++)
-                        {
-                            if (jj < 0 || jj > gridResolution.X - 1) { continue; }
-
-                            // Don't include the cell itself
-                            if (ii == aliveCellsPoints[i].X && jj == aliveCellsPoints[i].Y) { continue; }
-                            
-                            // If the neighbour is dead AND has 3 neighbours, make it alive
-                            if (aliveDeadChecker[ii,jj] == 0 && countNeighbours(new Point(ii, jj), gridResolution, aliveDeadChecker) == 3)
-                            {
-                                // Add the dead neighbour to makeAlive if it's not already added
-                                if (!isDuplicate(makeAlive, new Point(ii, jj)))
-                                {
-                                    makeAlive.Add(new Point(ii, jj));
-                                }
-                            }                           
-                        }
                     }
                 }
 
@@ -410,22 +385,39 @@ using Microsoft.VisualBasic;
         }
 
 
-        int countNeighbours(Point checkPoint, Point gridResolution, int[,] aliveDeadChecker)
+        int countNeighbours(Point checkPoint, Point gridResolution, int[,] aliveDeadChecker, bool countNeighbourNeighbour)
         {
             int neighboursCount = 0;
 
             // Check one to the left  - to - one to the right
             for (int i = checkPoint.X - 1; i <= checkPoint.X + 1; i++)
             {
-                
+                // Don't check outside grid
                 if (i < 0 || i > gridResolution.X - 1) { continue; }
 
                 // Check one the the left - to - one to the right
                 for (int j = checkPoint.Y - 1; j <= checkPoint.Y + 1; j++)
                 {
+                    // Don't check outside grid
                     if (j < 0 || j > gridResolution.Y - 1) { continue; }
+
+                    // Don't check the cell itself (center)
                     if (i == checkPoint.X && j == checkPoint.Y) { continue; }
+
+                    // If cell is alive
                     if (aliveDeadChecker[i, j] == 1) { neighboursCount++; }
+
+                    // If dead, check that dead neighbours neighbours. If 3 of them are alive, make the neighbour alive
+                    // Recursively
+                    Point thisPoint = new Point(i, j);
+                    if (countNeighbours(thisPoint, gridResolution, aliveDeadChecker, false) == 3)
+                    {
+                        if (!isDuplicate(makeAlive, thisPoint))
+                        {
+                            // ...if not, add cell to kill list
+                            makeAlive.Add(aliveCellsPoints[i]);
+                        }
+                    }
                 }
             }
             return neighboursCount;
