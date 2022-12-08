@@ -1,5 +1,9 @@
 # Game-Of-Life
-First try of making Conway's Game of Life.
+
+This is my first try of making Conway's Game of Life was in Basic (qBasic64), but this is my first try
+using C# and Windows Forms. I plan on making a better working one using WPF, or something else.
+
+You start 
 
 Conway's Game of Life rules:
 
