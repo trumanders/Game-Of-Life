@@ -41,6 +41,7 @@ using Microsoft.VisualBasic;
         double maxCells = -2000000000;
         int maxGrowthGeneration;
         double maxCellCount = 0;
+        List<Point> makeAlive;
 
 
         // Constructor
@@ -210,7 +211,7 @@ using Microsoft.VisualBasic;
         private void runSimLoop()
         {
             List<Point> kill = new List<Point>();       // Store coordinates of cells to remove
-            List<Point> makeAlive = new List<Point>();  // Store coordinates of cells to make alive
+            makeAlive = new List<Point>();              // Store coordinates of cells to make alive
             List<int> killIndexes = new List<int>();    // Store indexes of alive cells to remove
 
             // Set statistics
@@ -390,33 +391,37 @@ using Microsoft.VisualBasic;
             int neighboursCount = 0;
 
             // Check one to the left  - to - one to the right
-            for (int i = checkPoint.X - 1; i <= checkPoint.X + 1; i++)
+            for (int x = checkPoint.X - 1; x <= checkPoint.X + 1; x++)
             {
                 // Don't check outside grid
-                if (i < 0 || i > gridResolution.X - 1) { continue; }
+                if (x < 0 || x > gridResolution.X - 1) { continue; }
 
-                // Check one the the left - to - one to the right
-                for (int j = checkPoint.Y - 1; j <= checkPoint.Y + 1; j++)
+                // Check one up - to - one down
+                for (int y = checkPoint.Y - 1; y <= checkPoint.Y + 1; y++)
                 {
                     // Don't check outside grid
-                    if (j < 0 || j > gridResolution.Y - 1) { continue; }
+                    if (y < 0 || y > gridResolution.Y - 1) { continue; }
 
                     // Don't check the cell itself (center)
-                    if (i == checkPoint.X && j == checkPoint.Y) { continue; }
+                    if (x == checkPoint.X && y == checkPoint.Y) { continue; }
 
                     // If cell is alive
-                    if (aliveDeadChecker[i, j] == 1) { neighboursCount++; }
+                    if (aliveDeadChecker[x, y] == 1) { neighboursCount++; }
 
                     // If dead, check that dead neighbours neighbours. If 3 of them are alive, make the neighbour alive
                     // Recursively
-                    Point thisPoint = new Point(i, j);
-                    if (countNeighbours(thisPoint, gridResolution, aliveDeadChecker, false) == 3)
+                    else if (countNeighbourNeighbour)
                     {
-                        if (!isDuplicate(makeAlive, thisPoint))
+                        Point thisPoint = new Point(x, y);
+                        if (countNeighbours(thisPoint, gridResolution, aliveDeadChecker, false) == 3)
                         {
-                            // ...if not, add cell to kill list
-                            makeAlive.Add(aliveCellsPoints[i]);
+                            if (!isDuplicate(makeAlive, thisPoint))
+                            {
+                                // ...if not, add cell to makeAlive list
+                                makeAlive.Add(thisPoint);
+                            }
                         }
+                        countNeighbourNeighbour = true;
                     }
                 }
             }
